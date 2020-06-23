@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +22,7 @@ public class PropertyFileHandler {
     static {
         Properties prop = new Properties();
         try (InputStream input =
-                     new FileInputStream("src\\main\\resources\\config.properties")) {
+                     new FileInputStream("src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"config.properties")) {
             prop.load(input);
             logger.info("Constants are extracted from the property file");
         } catch (IOException ex) {
