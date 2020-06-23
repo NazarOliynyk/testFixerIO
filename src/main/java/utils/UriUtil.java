@@ -7,7 +7,7 @@ import static client.CustomClientBuilder.logger;
 
 public class UriUtil {
 
-    public static URI buildURI(String baseUrl,
+    public static synchronized URI buildURI(String baseUrl,
                                String date,
                                String accessKey,
                                String baseCurrency,

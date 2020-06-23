@@ -17,7 +17,7 @@ public class CustomClientBuilder {
     public CustomClientBuilder() {
     }
 
-    public Invocation.Builder getInvocationBuilder(URI uri) {
+    synchronized public Invocation.Builder getInvocationBuilder(URI uri) {
 
         if (invocationBuilder == null) {
             logger.info("Starting ClientBuilder");
