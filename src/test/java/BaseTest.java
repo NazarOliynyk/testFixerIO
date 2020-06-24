@@ -6,7 +6,7 @@ import org.testng.annotations.Listeners;
 import javax.ws.rs.client.Invocation;
 import java.net.URI;
 
-import static client.CustomClientBuilder.logger;
+//import static client.CustomClientBuilder.logger;
 
 @Listeners({TestListener.class})
 public abstract class BaseTest {
@@ -18,12 +18,14 @@ public abstract class BaseTest {
     @BeforeMethod
     public void reinitialize() {
         customClientBuilder= new CustomClientBuilder();
-        logger.trace("BeforeMethod: Initialize CustomClientBuilder");
+        System.out.println("BeforeMethod: Initialize CustomClientBuilder");
+//        logger.trace("BeforeMethod: Initialize CustomClientBuilder");
     }
 
     @AfterMethod
     public void cleanUp(){
         customClientBuilder.quit();
-        logger.trace("AfterMethod: Quit CustomClientBuilder");
+        System.out.println("AfterMethod: Quit CustomClientBuilder");
+//        logger.trace("AfterMethod: Quit CustomClientBuilder");
     }
 }
