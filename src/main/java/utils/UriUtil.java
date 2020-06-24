@@ -3,7 +3,7 @@ package utils;
 import javax.ws.rs.core.UriBuilder;
 import java.net.URI;
 
-//import static client.CustomClientBuilder.logger;
+import static client.CustomClientBuilder.logger;
 
 public class UriUtil {
 
@@ -17,8 +17,7 @@ public class UriUtil {
                 "?access_key=" + accessKey +
                 "&base=" + baseCurrency +
                 "&symbols=" + symbols).build();
-//        logger.debug("Trigger URI: ----- " + uri + " -------");
-        System.out.println("Trigger URI: ----- " + uri + " -------");
+        logger.debug("Trigger URI: ----- " + uri + " -------");
         return uri;
     }
 }
