@@ -3,7 +3,7 @@ package utils;
 import javax.ws.rs.core.UriBuilder;
 import java.net.URI;
 
-import static client.CustomClientBuilder.logger;
+import static logger.AllureLogger.logToAllureInfo;
 
 public class UriUtil {
 
@@ -17,7 +17,7 @@ public class UriUtil {
                 "?access_key=" + accessKey +
                 "&base=" + baseCurrency +
                 "&symbols=" + symbols).build();
-        logger.debug("Trigger URI: ----- " + uri + " -------");
+        logToAllureInfo("Trigger URI: ----- " + uri + " -------");
         return uri;
     }
 }

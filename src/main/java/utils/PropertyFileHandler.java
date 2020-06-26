@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import static client.CustomClientBuilder.logger;
+import static logger.AllureLogger.logToAllureError;
+import static logger.AllureLogger.logToAllureInfo;
 
 public class PropertyFileHandler {
 
@@ -24,10 +25,9 @@ public class PropertyFileHandler {
         try (InputStream input =
                      new FileInputStream("src"+ File.separator+"main"+ File.separator+"resources"+ File.separator+"config.properties")) {
             prop.load(input);
-            logger.info("Constants are extracted from the property file");
+            logToAllureInfo("Constants are extracted from the property file");
         } catch (IOException ex) {
-            logger.error(ex.getMessage());
-            logger.error(ex.getCause());
+            logToAllureError(ex.getMessage());
         }
         BASE_URL = prop.getProperty("baseurl");
         ACCESS_KEY = prop.getProperty("accessKey");

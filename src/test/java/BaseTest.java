@@ -6,7 +6,7 @@ import org.testng.annotations.Listeners;
 import javax.ws.rs.client.Invocation;
 import java.net.URI;
 
-import static client.CustomClientBuilder.logger;
+import static logger.AllureLogger.logToAllureInfo;
 
 @Listeners({TestListener.class})
 public abstract class BaseTest {
@@ -17,13 +17,13 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void reinitialize() {
-        customClientBuilder= new CustomClientBuilder();
-        logger.trace("BeforeMethod: Initialize CustomClientBuilder");
+        customClientBuilder = new CustomClientBuilder();
+        logToAllureInfo("BeforeMethod: Initialize CustomClientBuilder");
     }
 
     @AfterMethod
-    public void cleanUp(){
+    public void cleanUp() {
         customClientBuilder.quit();
-        logger.trace("AfterMethod: Quit CustomClientBuilder");
+        logToAllureInfo("AfterMethod: Quit CustomClientBuilder");
     }
 }
