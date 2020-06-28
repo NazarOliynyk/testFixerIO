@@ -12,9 +12,10 @@ public class Test2 extends BaseTest {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 2, description = "Verify call to the resource with non-default base currency")
+    @Description("Verify call to the resource with non-default base currency")
     @Epic("Allure reports example")
     @Feature("Feature1: call with non-default base currency")
-    @Story("Story: Verify call with non-default base currency providing that subscription allows only default currency")
+    @Step("Story: Verify call with non-default base currency providing that subscription allows only default currency")
     @Link("https://fixer.io/documentation")
     public void testResponseWithBaseCurrency() {
 

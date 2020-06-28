@@ -12,9 +12,10 @@ public class Test4 extends BaseTest {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(priority=4, description="Verify call to the resource with invalid date")
+    @Description("Verify call to the resource with invalid date")
     @Epic("Allure reports example")
     @Feature("Feature1: call with invalid date")
-    @Story("Story: Verify call with invalid(non-existing) date")
+    @Step("Story: Verify call with invalid(non-existing) date")
     @Link("https://fixer.io/documentation")
     public void testResponseWithInvalidDate(){
 

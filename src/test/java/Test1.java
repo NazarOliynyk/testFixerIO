@@ -12,9 +12,10 @@ public class Test1 extends BaseTest {
 
     @Severity(SeverityLevel.BLOCKER)
     @Test(priority = 1, description = "Verify Successful call to the resource")
+    @Description("Verify Successful call to the resource")
     @Epic("Allure reports example")
     @Feature("Feature1: Successful call")
-    @Story("Story: Verify call with all normal parameters")
+    @Step("Story: Verify call with all normal parameters")
     @Link("https://fixer.io/documentation")
     public void testCorrectResponse() {
 

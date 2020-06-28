@@ -12,9 +12,10 @@ public class Test3 extends BaseTest {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 3, description = "Verify call to the resource with the wrong access key")
+    @Description("Verify call to the resource with the wrong access key")
     @Epic("Allure reports example")
     @Feature("Feature1: call with the wrong access key")
-    @Story("Story: Verify call with the wrong access key")
+    @Step("Story: Verify call with the wrong access key")
     @Link("https://fixer.io/documentation")
     public void testResponseWithWrongKey() {
 

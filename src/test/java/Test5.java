@@ -12,9 +12,10 @@ public class Test5 extends BaseTest {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 5, description = "Verify call to the resource with the incomplete set of symbols")
+    @Description("Verify call to the resource with the incomplete set of symbols")
     @Epic("Allure reports example")
     @Feature("Feature1: call with the incomplete symbols")
-    @Story("Story: Verify call with the incomplete set of symbols to check that the symbol, which is not in set, is not present in the response")
+    @Step("Story: Verify call with the incomplete set of symbols to check that the symbol, which is not in set, is not present in the response")
     @Link("https://fixer.io/documentation")
     public void testResponseWithIncompleteSymbols() {
 

@@ -2,7 +2,8 @@ package logger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Step;
+
 
 public class AllureLogger {
 

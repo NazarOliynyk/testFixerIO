@@ -13,9 +13,10 @@ public class Test6 extends BaseTest {
 
     @Severity(SeverityLevel.NORMAL)
     @Test(priority = 6, description = "Verify call to the resource and check if the date matches to current date")
+    @Description("Verify call to the resource and check if the date matches to current date")
     @Epic("Allure reports example")
     @Feature("Feature1: date of response matches with current date")
-    @Story("Story: Verify if the date of response matches with current date")
+    @Step("Story: Verify if the date of response matches with current date")
     @Link("https://fixer.io/documentation")
     public void testDatesMatch() {
 
